@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CompendiumIdentity.Models.Project>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>COMPENDIUM</h1>
+    <p class="lead">Compendium is a free web application used to organize and manage projects</p>
+    <p>@Html.ActionLink("Learn More >>", "About", "Home", new { area = "" }, new { @class = " text-dark btn btn-info btn-lg" })</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            Click the project tab to view or add projects. All Projects will be displayed in the projects page.
+        </p>
+        @if (Request.IsAuthenticated)
+        {
+            <p>@Html.ActionLink("Projects >>", "Index", "Projects", new { area = "" }, new { @class = "text-dark btn btn-info btn-lg" })</p>
+        }
+        else
+        {
+    <p>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "text-dark btn btn-info btn-lg" })</p>
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>Portfolio<br />(Under Developement)</h2>
+        <p>when implemented, this will act as a container for completed projects.</p>
+        <p><a class="btn btn-default disabled" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Pin-Board(Under Developement)</h2>
+        <p>when implemented, this will act as bulletin board for those seeking help with projects.</p>
+        <p><a class="btn btn-default disabled" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
