@@ -29,6 +29,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TodoID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TodoID },new { @class="btn btn-info btn-lg text-dark"}) |
+    @Html.ActionLink("Back to List", "Index","Todoes", new { area=""}, new { @class="btn btn-secondary btn-lg"})
 </p>

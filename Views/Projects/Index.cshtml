@@ -17,7 +17,7 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYGpw8iuDbMU-JHZM_mwlw7p8CSkKY_D5M8w&usqp=CAU" class="card-img-top" alt="Card image cap">
         <div class="card-body bg-gradient">
             <h5 class="card-title text-light">@Item.Name</h5>
-           @Html.ActionLink("Jump In","Index","Features", new { id = Item.ProjectID}, new { @class="btn btn-info btn-lg text-dark"})
+           @Html.ActionLink("Jump In","Index","Features",new { id = Item.ProjectID}, new { @class="btn btn-info btn-lg text-dark"})
             @Html.ActionLink(" Delete","Delete", "Projects", new { id = Item.ProjectID }, new { @class="btn btn-secondary btn-lg fas fa-trash-alt"})
         </div>
     </div>

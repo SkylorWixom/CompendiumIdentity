@@ -18,10 +18,10 @@ namespace CompendiumIdentity.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
         
         // GET: Features
-        public ActionResult Index(int id)
+        public ActionResult Index(/*int? id*/)
         {
-            Project project = db.projects.Find(id);
-            return View(db.features.ToList().Where(x => x.Project == project));
+            //Project project = db.projects.Find(id);
+            return View(db.features.ToList());
         }
 
         // GET: Features/Details/5
@@ -40,7 +40,6 @@ namespace CompendiumIdentity.Controllers
         }
 
         // GET: Features/Create
-        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -52,13 +51,14 @@ namespace CompendiumIdentity.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FeatureID,Name")] Feature feature, int id)
+        public ActionResult Create([Bind(Include = "FeatureID,Name")] Feature feature)
         {
             
             if (ModelState.IsValid)
             {
-                Project project = db.projects.Find(id);
-                feature.Project = project;
+                /*var currentProjectID = db.projects.Find(id);
+                Project project = db.projects.FirstOrDefault(p => p.ProjectID == currentProjectID.ProjectID);
+                feature.Project = project;*/
                 db.features.Add(feature);
                 db.SaveChanges();
                 return RedirectToAction("Index");

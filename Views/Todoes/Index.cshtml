@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<CompendiumIdentity.Models.Todo>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "To Do";
 }
 
-<h2>Index</h2>
+<h2>TO-DO</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create","Todoes",new { area=""}, new { @class="btn btn-info btn-lg text-dark"})
 </p>
 <table class="table">
     <tr>

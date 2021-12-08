@@ -275,6 +275,18 @@
     <Compile Include="Migrations\202112072113135_InitialCreate.Designer.cs">
       <DependentUpon>202112072113135_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112080605384_fixedTables.cs" />
+    <Compile Include="Migrations\202112080605384_fixedTables.Designer.cs">
+      <DependentUpon>202112080605384_fixedTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112080611123_alteredTables.cs" />
+    <Compile Include="Migrations\202112080611123_alteredTables.Designer.cs">
+      <DependentUpon>202112080611123_alteredTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112080712068_fixedFeatureTable.cs" />
+    <Compile Include="Migrations\202112080712068_fixedFeatureTable.Designer.cs">
+      <DependentUpon>202112080712068_fixedFeatureTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Feature.cs" />
@@ -379,6 +391,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202112072113135_InitialCreate.resx">
       <DependentUpon>202112072113135_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112080605384_fixedTables.resx">
+      <DependentUpon>202112080605384_fixedTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112080611123_alteredTables.resx">
+      <DependentUpon>202112080611123_alteredTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112080712068_fixedFeatureTable.resx">
+      <DependentUpon>202112080712068_fixedFeatureTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

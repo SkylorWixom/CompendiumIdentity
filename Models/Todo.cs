@@ -13,6 +13,7 @@ namespace CompendiumIdentity.Models
 
         public bool IsDone { get; set; }
 
+        
        public virtual Feature Feature { get; set; }
     }
 }

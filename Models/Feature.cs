@@ -12,7 +12,7 @@ namespace CompendiumIdentity.Models
         public string Name { get; set; }
         
 
-        public int projectID { get; set; }
+        
         public virtual Project Project{get;set;}
         public ICollection<Todo> todo { get; set; }
     }
