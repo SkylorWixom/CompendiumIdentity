@@ -23,6 +23,7 @@ namespace CompendiumIdentity.Controllers
             return View(db.projects.ToList().Where(x => x.user == currentUser));
         }
 
+
         // GET: Projects/Details/5
         public ActionResult Details(int? id)
         {
